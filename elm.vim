@@ -71,9 +71,13 @@ syn keyword elmBuiltinFunction dropWhen dropRepeats sampleOn red green blue cyan
 syn keyword elmBuiltinFunction yellow magenta black white grey gray rgb rgba
 syn keyword elmBuiltinFunction complement hsv hsva
 
+" Comments
+syn match elmLineComment "--.*"
+
 let b:current_syntax = "elm"
 
 hi def link elmKeyword            Keyword
 hi def link elmBuiltinOp          Special
 hi def link elmBuiltinType        Type
 hi def link elmBuiltinFunction    Function
+hi def link elmLineComment        Comment
