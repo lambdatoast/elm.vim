@@ -72,7 +72,9 @@ syn keyword elmBuiltinFunction yellow magenta black white grey gray rgb rgba
 syn keyword elmBuiltinFunction complement hsv hsva
 
 " Comments
+syn match elmTodo "[tT][oO][dD][oO]" contained
 syn match elmLineComment "--.*"
+syn region elmComment start="{-" end="-}" contains=elmTodo,elmComment
 
 let b:current_syntax = "elm"
 
@@ -80,4 +82,6 @@ hi def link elmKeyword            Keyword
 hi def link elmBuiltinOp          Special
 hi def link elmBuiltinType        Type
 hi def link elmBuiltinFunction    Function
+hi def link elmTodo               Todo
 hi def link elmLineComment        Comment
+hi def link elmComment            Comment
