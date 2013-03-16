@@ -14,7 +14,7 @@ syn keyword elmKeyword module newtype of then type where _
 
 " Builtin operators
 syn match elmBuiltinOp "\.\."
-syn match elmBuiltinOp "|"
+syn match elmBuiltinOp "|\{,2\}"
 syn match elmBuiltinOp ":"
 syn match elmBuiltinOp "::"
 syn match elmBuiltinOp "="
@@ -24,7 +24,7 @@ syn match elmBuiltinOp "->"
 syn match elmBuiltinOp "<-"
 syn match elmBuiltinOp "\u2192"
 syn match elmBuiltinOp "\u03BB"
-syn match elmBuiltinOp "$"
+syn match elmBuiltinOp "\$"
 syn match elmBuiltinOp "&&"
 syn match elmBuiltinOp "+"
 syn match elmBuiltinOp "++"
@@ -37,8 +37,7 @@ syn match elmBuiltinOp "<="
 syn match elmBuiltinOp "=="
 syn match elmBuiltinOp ">"
 syn match elmBuiltinOp ">="
-syn match elmBuiltinOp "^"
-syn match elmBuiltinOp "||"
+syn match elmBuiltinOp "\^"
 syn match elmBuiltinOp "\*"
 syn match elmBuiltinOp "<\~"
 syn match elmBuiltinOp "\~"
@@ -75,6 +74,6 @@ syn keyword elmBuiltinFunction complement hsv hsva
 let b:current_syntax = "elm"
 
 hi def link elmKeyword            Keyword
-hi def link elmBuiltinOp          Normal
+hi def link elmBuiltinOp          Special
 hi def link elmBuiltinType        Type
 hi def link elmBuiltinFunction    Function
