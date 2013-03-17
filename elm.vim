@@ -76,6 +76,11 @@ syn match elmTodo "[tT][oO][dD][oO]" contained
 syn match elmLineComment "--.*"
 syn region elmComment start="{-" end="-}" contains=elmTodo,elmComment
 
+" String literals
+syn region elmString start="\"[^"]" skip="\\\"" end="\"" contains=elmStringEscape
+syn match elmStringEscape "\\u[0-9a-fA-F]\{4}" contained
+syn match elmStringEscape "\\[nrfvb\\\"]" contained
+
 let b:current_syntax = "elm"
 
 hi def link elmKeyword            Keyword
@@ -85,3 +90,4 @@ hi def link elmBuiltinFunction    Function
 hi def link elmTodo               Todo
 hi def link elmLineComment        Comment
 hi def link elmComment            Comment
+hi def link elmString             String
