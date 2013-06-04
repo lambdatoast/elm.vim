@@ -44,6 +44,7 @@ syn match elmBuiltinOp "\~"
 
 " Builtin types
 syn keyword elmBuiltinType Bool Char False Float GT Int Just LT Maybe Nothing String True
+syn keyword elmBuiltinType Time Date Text Order Element List Signal Tuple Either
 
 " Builtin functions
 syn keyword elmBuiltinFunction abs acos acosh all and any
