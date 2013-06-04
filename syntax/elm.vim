@@ -81,6 +81,10 @@ syn region elmString start="\"[^"]" skip="\\\"" end="\"" contains=elmStringEscap
 syn match elmStringEscape "\\u[0-9a-fA-F]\{4}" contained
 syn match elmStringEscape "\\[nrfvb\\\"]" contained
 
+" Number literals
+syn match elmNumber "\(\<\d\+\>\)"
+syn match elmNumber "\(\<\d\+\.\d\+\>\)"
+
 let b:current_syntax = "elm"
 
 hi def link elmKeyword            Keyword
@@ -91,3 +95,4 @@ hi def link elmTodo               Todo
 hi def link elmLineComment        Comment
 hi def link elmComment            Comment
 hi def link elmString             String
+hi def link elmNumber             Number
