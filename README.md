@@ -8,7 +8,7 @@ Vim syntax file for the [Elm programming language](http://elm-lang.org/).
 * `\m` for `elm --make Main.elm`.
 * `\t` for printing types of the current file.
 
-Where `\\` is your local leader key (`\\` by default).
+Where `\` is your local leader key (`\` by default).
 
 ## TODO
 
