@@ -18,11 +18,19 @@ function! ElmPrintTypes()
   echo ExecCompilerCmd(compilercmd . " && " . cleanUpCmd)
 endfunction
 
-function! ElmMake()
-  let file = expand("%")
-  let compilercmd = "elm " . "--make " . file
-  echo ExecCompilerCmd(compilercmd)
+function! ElmMake(file)
+  let compilercmd = "elm " . "--make " . a:file
+  return ExecCompilerCmd(compilercmd)
+endfunction
+
+function! ElmMakeCurrentFile()
+  echo ElmMake(expand("%"))
+endfunction
+
+function! ElmMakeMain()
+  echo ElmMake("Main.elm")
 endfunction
 
 map <LocalLeader>t :call ElmPrintTypes()<ENTER>
-map <LocalLeader>m :call ElmMake()<ENTER>
+map <LocalLeader>c :call ElmMakeCurrentFile()<ENTER>
+map <LocalLeader>m :call ElmMakeMain()<ENTER>
