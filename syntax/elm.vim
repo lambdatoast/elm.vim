@@ -119,7 +119,7 @@ syn match elmLineComment "--.*"
 syn region elmComment start="{-" end="-}" contains=elmTodo,elmComment
 
 " String literals
-syn region elmString start="\"[^"]" skip="\\\"" end="\"" contains=elmStringEscape
+syn region elmString start="\"" skip="\\\"" end="\"" contains=elmStringEscape
 syn match elmStringEscape "\\u[0-9a-fA-F]\{4}" contained
 syn match elmStringEscape "\\[nrfvb\\\"]" contained
 
