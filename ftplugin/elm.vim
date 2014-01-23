@@ -31,6 +31,13 @@ function! ElmMakeMain()
   echo ElmMake("Main.elm")
 endfunction
 
-map <LocalLeader>t :call ElmPrintTypes()<ENTER>
-map <LocalLeader>c :call ElmMakeCurrentFile()<ENTER>
-map <LocalLeader>m :call ElmMakeMain()<ENTER>
+" REPL 
+
+function! ElmRepl()
+  !elm-repl
+endfunction
+
+nnoremap <LocalLeader>t :call ElmPrintTypes()<ENTER>
+nnoremap <LocalLeader>c :call ElmMakeCurrentFile()<ENTER>
+nnoremap <LocalLeader>m :call ElmMakeMain()<ENTER>
+nnoremap <LocalLeader>r :call ElmRepl()<ENTER>
