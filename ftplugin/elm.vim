@@ -15,7 +15,20 @@ function! ElmPrintTypes()
   let cacheDir = tmpname . ".cache"
   let compilercmd = "elm " . "-b " . buildDir . " -c " . cacheDir . " --print-types " . file
   let cleanUpCmd = "rm -rf " . buildDir . " " . cacheDir
-  echo ExecCompilerCmd(compilercmd . " && " . cleanUpCmd)
+  return ReadCmdIntoNewWindow(compilercmd . " && " . cleanUpCmd)
+endfunction
+
+function! ReadCmdIntoNewWindow(cmd) abort
+  try
+    new
+    exec "read! " . a:cmd
+    " setlocal buftype=nowrite nomodified filetype=elm
+    setlocal buftype=nowrite nomodified
+    nnoremap <buffer> <silent> q    :<C-U>bdelete<CR>
+    return ''
+  catch /^*/
+    return 'echoerr v:errmsg'
+  endtry
 endfunction
 
 function! ElmMake(file)
