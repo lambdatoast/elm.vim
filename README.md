@@ -37,9 +37,9 @@ them according to your needs, for a better experience.
 
 I have the following mappings in my .vimrc at the moment:
 
-* `nnoremap <leader>ee :ElmEvalLine<CR>`
-* `nnoremap <leader>ep :ElmPrintTypes<CR>`
-* `nnoremap <leader>em :ElmMakeCurrentFile<CR>`
+    nnoremap <leader>ee :ElmEvalLine<CR>
+    nnoremap <leader>ep :ElmPrintTypes<CR>
+    nnoremap <leader>em :ElmMakeCurrentFile<CR>
 
 ## TODO
 
