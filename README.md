@@ -31,7 +31,16 @@ them according to your needs, for a better experience.
 
 * `:ElmRepl` switches to `elm-repl`, when closing the REPL you'll get back to vim.
 
+## Notes
+
+### Example mappings
+
+I have the following mappings in my .vimrc at the moment:
+
+nnoremap <leader>ee :ElmEvalLine<CR>
+nnoremap <leader>ep :ElmPrintTypes<CR>
+nnoremap <leader>em :ElmMakeCurrentFile<CR>
+
 ## TODO
 
 * Integration with Elm docs.
-* More useful integration with `elm-repl`.
