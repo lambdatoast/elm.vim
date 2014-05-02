@@ -1,6 +1,6 @@
 " elm.vim - Plugin for the Elm programming language
 " Maintainer:   Alexander Noriega <http://lambdatoast.com/>
-" Version:      0.2
+" Version:      0.3
 
 
 " Plugin setup stuff
@@ -87,7 +87,8 @@ function! s:Filtered(fn, l)
     return new_list
 endfunction
 
-nnoremap <LocalLeader>t :call ElmPrintTypes()<ENTER>
-nnoremap <LocalLeader>c :call ElmMakeCurrentFile()<ENTER>
-nnoremap <LocalLeader>m :call ElmMakeMain()<ENTER>
-nnoremap <LocalLeader>r :call ElmRepl()<ENTER>
+command ElmEvalLine        call ElmEvalLine()
+command ElmPrintTypes      call ElmPrintTypes()
+command ElmMakeMain        call ElmMakeMain()
+command ElmMakeCurrentFile call ElmMakeCurrentFile()
+command ElmRepl            call ElmRepl()
