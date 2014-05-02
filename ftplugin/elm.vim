@@ -87,8 +87,8 @@ function! s:Filtered(fn, l)
     return new_list
 endfunction
 
-command ElmEvalLine        call ElmEvalLine()
-command ElmPrintTypes      call ElmPrintTypes()
-command ElmMakeMain        call ElmMakeMain()
-command ElmMakeCurrentFile call ElmMakeCurrentFile()
-command ElmRepl            call ElmRepl()
+command -buffer ElmEvalLine        call ElmEvalLine()
+command -buffer ElmPrintTypes      call ElmPrintTypes()
+command -buffer ElmMakeMain        call ElmMakeMain()
+command -buffer ElmMakeCurrentFile call ElmMakeCurrentFile()
+command -buffer ElmRepl            call ElmRepl()
