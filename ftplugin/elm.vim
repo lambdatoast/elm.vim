@@ -52,6 +52,14 @@ function! ElmEvalLine()
   return ElmEval(getline("."))
 endfunction
 
+function! ElmEvalSelection()
+  let savedReg = @z
+  normal! `<v`>"zy
+  let res = ElmEval(getreg("z"))
+  let @z = savedReg
+  normal! gv
+endfunction
+
 function! ElmEval(sourceCode)
   let currentLine = a:sourceCode
   let cmd = "echo '" . currentLine . "' | elm-repl"
@@ -88,6 +96,7 @@ function! s:Filtered(fn, l)
 endfunction
 
 command -buffer ElmEvalLine        call ElmEvalLine()
+command -buffer ElmEvalSelection   call ElmEvalSelection()
 command -buffer ElmPrintTypes      call ElmPrintTypes()
 command -buffer ElmMakeMain        call ElmMakeMain()
 command -buffer ElmMakeCurrentFile call ElmMakeCurrentFile()

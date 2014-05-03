@@ -13,33 +13,33 @@ However, for the special commands and aliases (for compilation, etc), the plugin
 
 ## Usage
 
-The following are the existing commands. Create keyboard mappings for 
-them according to your needs, for a better experience.
+The following are the existing commands. To get the most out of them, 
+you should create mappings according to your needs.
 
 ### Compilation
 
 * `:ElmMakeCurrentFile` compiles the current file.
 * `:ElmMakeMain` compiles an assumed `Main.elm` file.
+* `:ElmPrintTypes` displays the types of the current file in a new split window.
 
 ### Evaluation
 
 * `:ElmEvalLine` evaluates the current line and puts the result as a
   comment in a new line below it.
-* `:ElmPrintTypes` displays the types of the current file in a new split window.
+* `:ElmEvalSelection` evaluates a visual mode selection.
 
 ### REPL
 
 * `:ElmRepl` switches to `elm-repl`, when closing the REPL you'll get back to vim.
 
-## Notes
-
 ### Example mappings
 
-I have the following mappings in my .vimrc at the moment:
+I use the following mappings in my .vimrc at the moment:
 
-    nnoremap <leader>ee :ElmEvalLine<CR>
-    nnoremap <leader>ep :ElmPrintTypes<CR>
-    nnoremap <leader>em :ElmMakeCurrentFile<CR>
+  nnoremap <leader>el :ElmEvalLine<CR>
+  vnoremap <leader>es :<C-u>ElmEvalSelection<CR>
+  nnoremap <leader>ep :ElmPrintTypes<CR>
+  nnoremap <leader>em :ElmMakeCurrentFile<CR>
 
 ## TODO
 
