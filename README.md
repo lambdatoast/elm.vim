@@ -13,7 +13,7 @@ However, for the special commands and aliases (for compilation, etc), the plugin
 
 ## Usage
 
-The following are the existing commands. To get the most out of them, 
+These are the available commands. To get the most out of them, 
 you should create mappings according to your needs.
 
 ### Compilation
