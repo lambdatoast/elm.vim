@@ -36,10 +36,10 @@ you should create mappings according to your needs.
 
 I use the following mappings in my .vimrc at the moment:
 
-  nnoremap <leader>el :ElmEvalLine<CR>
-  vnoremap <leader>es :<C-u>ElmEvalSelection<CR>
-  nnoremap <leader>ep :ElmPrintTypes<CR>
-  nnoremap <leader>em :ElmMakeCurrentFile<CR>
+    nnoremap <leader>el :ElmEvalLine<CR>
+    vnoremap <leader>es :<C-u>ElmEvalSelection<CR>
+    nnoremap <leader>ep :ElmPrintTypes<CR>
+    nnoremap <leader>em :ElmMakeCurrentFile<CR>
 
 ## TODO
 
