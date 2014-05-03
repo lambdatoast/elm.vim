@@ -55,7 +55,7 @@ endfunction
 function! ElmEvalSelection()
   let savedReg = @z
   normal! `<v`>"zy
-  let res = ElmEval(getreg("z"))
+  let res = ElmEval(substitute(getreg("z"), "\n", "\\\n", "g"))
   let @z = savedReg
   normal! gv
 endfunction
