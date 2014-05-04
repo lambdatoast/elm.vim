@@ -6,7 +6,7 @@ Vim plugin for the [Elm programming language](http://elm-lang.org/).
 
 Nothing other than vim is needed for the syntax highlighting.
 
-However, for the special commands and aliases (for compilation, etc), the plugin expects the following programs to be available:
+For the special commands and aliases (for compilation, etc), the plugin expects the following programs to be available:
 
 * `elm`: The Elm compiler.
 * `elm-repl`: The Elm REPL.
