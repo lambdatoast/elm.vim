@@ -9,7 +9,7 @@ Nothing other than vim is needed for the syntax highlighting.
 For the special commands and aliases (for compilation, etc), the plugin expects the following programs to be available:
 
 * `elm`: The Elm compiler.
-* `elm-repl`: The Elm REPL.
+* `elm-repl`: The Elm REPL. The plugin sends it bits of code for evaluation.
 
 ## Usage
 
