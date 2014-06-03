@@ -40,6 +40,12 @@ function! ElmMakeMain()
   echo ElmMake("Main.elm")
 endfunction
 
+" File management
+
+function! ElmClearCachedFiles()
+  echo system("rm -rf build cache")
+endfunction
+
 " REPL 
 
 function! ElmRepl()
@@ -95,9 +101,10 @@ function! s:Filtered(fn, l)
     return new_list
 endfunction
 
-command -buffer ElmEvalLine        call ElmEvalLine()
-command -buffer ElmEvalSelection   call ElmEvalSelection()
-command -buffer ElmPrintTypes      call ElmPrintTypes()
-command -buffer ElmMakeMain        call ElmMakeMain()
-command -buffer ElmMakeCurrentFile call ElmMakeCurrentFile()
-command -buffer ElmRepl            call ElmRepl()
+command -buffer ElmEvalLine         call ElmEvalLine()
+command -buffer ElmEvalSelection    call ElmEvalSelection()
+command -buffer ElmPrintTypes       call ElmPrintTypes()
+command -buffer ElmMakeMain         call ElmMakeMain()
+command -buffer ElmMakeCurrentFile  call ElmMakeCurrentFile()
+command -buffer ElmClearCachedFiles call ElmClearCachedFiles()
+command -buffer ElmRepl             call ElmRepl()
