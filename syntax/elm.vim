@@ -89,7 +89,7 @@ syn keyword elmBuiltinFunction (::) (++) head tail last isEmpty map foldl foldr 
 " Maybe
 syn keyword elmBuiltinFunction maybe isJust isNothing justs
 " Mouse
-syn keyword elmBuiltinFunction position x y isDown isClicked clicks
+syn keyword elmBuiltinFunction position isDown isClicked clicks
 " Prelude
 syn keyword elmBuiltinFunction show readInt readFloat
 " Random
