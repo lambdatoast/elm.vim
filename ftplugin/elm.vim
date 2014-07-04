@@ -108,3 +108,8 @@ command -buffer ElmMakeMain         call ElmMakeMain()
 command -buffer ElmMakeCurrentFile  call ElmMakeCurrentFile()
 command -buffer ElmClearCachedFiles call ElmClearCachedFiles()
 command -buffer ElmRepl             call ElmRepl()
+
+" Define comment convention
+
+setlocal comments=:--
+setlocal commentstring=--%s
