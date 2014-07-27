@@ -51,7 +51,7 @@ These are just some examples of what I use sometimes:
 * Usually more useful: Compiling a speficic file, e.g. "Main.elm", on file write to any file in the project: 
     + `:au BufWritePost *.elm ElmMakeFile("Main.elm")`
 
-Remember you can clear all these afterwards, with e.g. `:au! BufWritePost *.elm`.
+Remember you can clear all these afterwards, with e.g. `:au! BufWritePost *.elm`
 
 ## TODO
 
