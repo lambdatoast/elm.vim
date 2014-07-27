@@ -41,6 +41,15 @@ I use the following mappings in my .vimrc at the moment:
     nnoremap <leader>ep :ElmPrintTypes<CR>
     nnoremap <leader>em :ElmMakeCurrentFile<CR>
 
+### Example autocommands
+
+Configure Vim autocommands to make your life easier:
+
+* Compiling the current file on save: 
+    `:au BufWritePost *.elm ElmMakeCurrentFile`
+* Say a file "Main.elm" is the main file of your project, compile it on write to any file: 
+    `:au BufWritePost *.elm ElmMakeFile("Main.elm")`
+
 ## TODO
 
 * Integration with Elm docs.

@@ -1,6 +1,6 @@
 " elm.vim - Plugin for the Elm programming language
 " Maintainer:   Alexander Noriega <http://lambdatoast.com/>
-" Version:      0.3
+" Version:      0.4.0
 
 
 " Plugin setup stuff
@@ -38,6 +38,10 @@ endfunction
 
 function! ElmMakeMain()
   echo ElmMake("Main.elm")
+endfunction
+
+function! ElmMakeFile(file)
+  echo ElmMake(a:file)
 endfunction
 
 " File management
@@ -101,13 +105,14 @@ function! s:Filtered(fn, l)
     return new_list
 endfunction
 
-command -buffer ElmEvalLine         call ElmEvalLine()
-command -buffer ElmEvalSelection    call ElmEvalSelection()
-command -buffer ElmPrintTypes       call ElmPrintTypes()
-command -buffer ElmMakeMain         call ElmMakeMain()
-command -buffer ElmMakeCurrentFile  call ElmMakeCurrentFile()
-command -buffer ElmClearCachedFiles call ElmClearCachedFiles()
-command -buffer ElmRepl             call ElmRepl()
+command -buffer ElmEvalLine          call ElmEvalLine()
+command -buffer ElmEvalSelection     call ElmEvalSelection()
+command -buffer ElmPrintTypes        call ElmPrintTypes()
+command -buffer ElmMakeMain          call ElmMakeMain()
+command -buffer -nargs=1 ElmMakeFile call ElmMakeFile <args>
+command -buffer ElmMakeCurrentFile   call ElmMakeCurrentFile()
+command -buffer ElmClearCachedFiles  call ElmClearCachedFiles()
+command -buffer ElmRepl              call ElmRepl()
 
 " Define comment convention
 
