@@ -43,12 +43,13 @@ I use the following mappings in my .vimrc at the moment:
 
 ### Example autocommands
 
-Configure Vim autocommands to make your life easier:
+Vim autocommands can make your life a lot easier.
+These are just some examples of what I use sometimes:
 
-* Compiling the current file on save: 
-    `:au BufWritePost *.elm ElmMakeCurrentFile`
-* Say a file "Main.elm" is the main file of your project, compile it on write to any file: 
-    `:au BufWritePost *.elm ElmMakeFile("Main.elm")`
+* Compiling the current file on file write: 
+    + `:au BufWritePost *.elm ElmMakeCurrentFile`
+* Compiling a speficic file, e.g. "Main.elm", on file write to any file: 
+    + `:au BufWritePost *.elm ElmMakeFile("Main.elm")`
 
 ## TODO
 
