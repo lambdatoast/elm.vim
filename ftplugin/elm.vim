@@ -1,6 +1,6 @@
 " elm.vim - Plugin for the Elm programming language
 " Maintainer:   Alexander Noriega <http://lambdatoast.com/>
-" Version:      0.4.0
+" Version:      0.4.1
 
 
 " Plugin setup stuff
@@ -13,7 +13,7 @@ let b:did_ftplugin = 1
 
 " Compilation
 
-function! ExecCompilerCmd(cmd)
+function! s:ExecCompilerCmd(cmd)
   return system("which elm && " . a:cmd)
 endfunction
 
@@ -29,7 +29,7 @@ endfunction
 
 function! ElmMake(file)
   let compilercmd = "elm " . "--make " . a:file
-  return ExecCompilerCmd(compilercmd)
+  return s:ExecCompilerCmd(compilercmd)
 endfunction
 
 function! ElmMakeCurrentFile()
