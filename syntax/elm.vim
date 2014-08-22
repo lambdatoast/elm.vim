@@ -116,7 +116,7 @@ syn keyword elmBuiltinFunction dimensions width height
 " Comments
 syn match elmTodo "[tT][oO][dD][oO]\|FIXME\|XXX" contained
 syn match elmLineComment "--.*" contains=elmTodo,@spell
-syn region elmComment matchgroup=elmComment start="{-" end="-}" contains=elmTodo,elmComment,@spell
+syn region elmComment matchgroup=elmComment start="{-|\=" end="-}" contains=elmTodo,elmComment,@spell
 
 " String literals
 syn region elmString start="\"" skip="\\\"" end="\"" contains=elmStringEscape
