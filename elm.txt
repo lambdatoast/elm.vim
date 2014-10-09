@@ -1,0 +1,85 @@
+elm.txt   Last change 2014 October 9
+===============================================================================
+===============================================================================
+             oooo                                     o8o
+             `888                                     `"'
+    .ooooo.   888  ooo. .oo.  .oo.       oooo    ooo oooo  ooo. .oo.  .oo.
+   d88' `88b  888  `888P"Y88bP"Y88b       `88.  .8'  `888  `888P"Y88bP"Y88b
+   888ooo888  888   888   888   888        `88..8'    888   888   888   888
+   888    .o  888   888   888   888  .o.    `888'     888   888   888   888
+   `Y8bod8P' o888o o888o o888o o888o Y8P     `8'     o888o o888o o888o o888o
+===============================================================================
+CONTENTS                                                         elm-contents
+
+  1. Features:                                         elm-features
+  2. Requirements:                                     elm-requirements
+  3. Functions:                                        elm-functions
+  4. Troubleshooting:                                  elm-troubleshooting
+  5. Information:                                      elm-information
+
+===============================================================================
+FEATURES                                                         elm-features
+
+  * Syntax Highlighting
+  * Indentation
+  * Compilation from vim
+  * Evaluation of code
+  * REPL inside vim
+
+===============================================================================
+REQUIREMENTS                                                 elm-requirements
+
+  * Elm (http://elm-lang.org/)
+
+===============================================================================
+FUNCTIONS                                                       elm-functions
+
+ElmMake                                                               ElmMake
+  This takes a file as an argument and compiles it using elm. It isn't
+  typically called by the user, but is instead used by ElmMakeCurrentFile and
+  ElmMakeMain.
+
+ElmMakeCurrentFile                                         ElmMakeCurrentFile
+  This compiles the file currently being edited using elm.
+
+ElmMakeMain                                                       ElmMakeMain
+  This compiles "Main.elm", no matter what the current file is.
+
+ElmPrintTypes                                                   ElmPrintTypes
+  This splits the current window and displays all the types of the current
+  file in the new window.
+
+ElmEvalLine                                                       ElmEvalLine
+  This takes the selected line and evaluates it with elm, then pipes the
+  result to a new line below it.
+
+ElmEvalSelection                                             ElmEvalSelection
+  This is like ElmEvalLine, but works on a visual mode selection instead of
+  the current line.
+
+ElmRepl                                                               ElmRepl
+  This switches from the current file to elm-repl and remains there until the
+  the repl is exited.
+
+===============================================================================
+TROUBLESHOOTING                                           elm-troubleshooting
+
+If something's broken, first make sure you have elm installed and in your path
+(if 'elm' on the command line returns something along the lines of "command not
+found" then one of those things is probably not true) and that your filetype is
+elm (":set ft?" in vim returns the current filetype to check this). If both
+of these things are true, check the issue tracker on github, and if no one
+there has the same issue as you, submit an issue with a detailed description of
+your problem.
+
+===============================================================================
+INFORMATION                                                   elm-information
+
+Author: lambdatoast
+Homepage: https://github.com/lambdatoast/elm.vim
+
+Documentation by japesinator
+
+===============================================================================
+===============================================================================
+" vim:ft=help:et:ts=2:sw=2:sts=2:norl:
