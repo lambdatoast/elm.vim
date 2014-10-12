@@ -13,7 +13,7 @@ For the special commands and aliases (for compilation, etc), the plugin expects 
 
 ## Usage
 
-These are the available commands. To get the most out of them, 
+These are the available commands. To get the most out of them,
 you should create mappings according to your needs.
 
 ### Compilation
@@ -46,9 +46,9 @@ I use the following mappings in my .vimrc at the moment:
 Vim autocommands can make your life a lot easier.
 These are just some examples of what I use sometimes:
 
-* Compiling the current file on write: 
+* Compiling the current file on write:
     + `:au BufWritePost *.elm ElmMakeCurrentFile`
-* Usually more useful: Compiling a speficic file, e.g. "Main.elm", on file write to any file in the project: 
+* Usually more useful: Compiling a specific file, e.g. "Main.elm", on file write to any file in the project:
     + `:au BufWritePost *.elm ElmMakeFile("Main.elm")`
 
 Remember you can clear all these afterwards, with e.g. `:au! BufWritePost *.elm`
