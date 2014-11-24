@@ -17,7 +17,7 @@ function! ElmPrintTypes()
   let tmpname = "tmp.elm.vim.plugin"
   let buildDir = tmpname . ".build"
   let cacheDir = tmpname . ".cache"
-  let compilercmd = "elm " . "-b " . buildDir . " -c " . cacheDir . " --print-types " . file
+  let compilercmd = "elm " . "--build-dir=" . buildDir . " --cache-dir=" . cacheDir . " --print-types " . file
   let cleanUpCmd = "rm -rf " . buildDir . " " . cacheDir
   return elm#io#read_into_new_window(compilercmd . " && " . cleanUpCmd)
 endfunction
