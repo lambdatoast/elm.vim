@@ -87,7 +87,7 @@ syn region elmComment matchgroup=elmComment start="{-|\=" end="-}" contains=elmT
 " String literals
 syn region elmString start="\"" skip="\\\"" end="\"" contains=elmStringEscape
 syn match elmStringEscape "\\u[0-9a-fA-F]\{4}" contained
-syn match elmStringEscape "\\[nrfvb\\\"]" contained
+syn match elmStringEscape "\\[nrfvbt\\\"]" contained
 
 " Number literals
 syn match elmNumber "\(\<\d\+\>\)"
