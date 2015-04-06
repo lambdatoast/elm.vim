@@ -8,7 +8,7 @@ Nothing other than vim is needed for the syntax highlighting.
 
 For the special commands and aliases (for compilation, etc), the plugin expects the following programs to be available:
 
-* `elm`: The Elm compiler.
+* `elm-make`: The Elm compiler.
 * `elm-repl`: The Elm REPL. The plugin sends it bits of code for evaluation.
 
 ## Usage
@@ -20,7 +20,7 @@ you should create mappings according to your needs.
 
 * `:ElmMakeCurrentFile` compiles the current file.
 * `:ElmMakeMain` compiles an assumed `Main.elm` file.
-* `:ElmPrintTypes` displays the types of the current file in a new split window.
+* `:ElmMakeFile <filename>` compiles `filename`.
 
 ### Evaluation
 
