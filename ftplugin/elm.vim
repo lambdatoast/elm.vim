@@ -12,19 +12,9 @@ let b:did_ftplugin = 1
 
 " Compilation
 
-" function! ElmPrintTypes()
-"   let file = expand("%")
-"   let tmpname = "tmp.elm.vim.plugin"
-"   let buildDir = tmpname . ".build"
-"   let cacheDir = tmpname . ".cache"
-"   let compilercmd = "elm " . "--build-dir=" . buildDir . " --cache-dir=" . cacheDir . " --print-types " . file
-"   let cleanUpCmd = "rm -rf " . buildDir . " " . cacheDir
-"   return elm#io#read_into_new_window(compilercmd . " && " . cleanUpCmd)
-" endfunction
-
 function! ElmMake(file)
-  let args = "--make " . a:file
-  return elm#io#system("elm", args)
+  let args = a:file
+  return elm#io#system("elm-make", args)
 endfunction
 
 function! ElmMakeCurrentFile()
@@ -38,12 +28,6 @@ endfunction
 function! ElmMakeFile(file)
   echo ElmMake(a:file)
 endfunction
-
-" File management
-
-" function! ElmClearCachedFiles()
-"   echo elm#io#system("rm", "-rf build cache")
-" endfunction
 
 " REPL
 
@@ -87,11 +71,9 @@ endfunction
 
 command -buffer ElmEvalLine          call ElmEvalLine()
 command -buffer ElmEvalSelection     call ElmEvalSelection()
-" command -buffer ElmPrintTypes        call ElmPrintTypes()
 command -buffer ElmMakeMain          call ElmMakeMain()
 command -buffer -nargs=1 ElmMakeFile call ElmMakeFile <args>
 command -buffer ElmMakeCurrentFile   call ElmMakeCurrentFile()
-" command -buffer ElmClearCachedFiles  call ElmClearCachedFiles()
 command -buffer ElmRepl              call ElmRepl()
 
 " Define comment convention
