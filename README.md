@@ -38,7 +38,6 @@ I use the following mappings in my .vimrc at the moment:
 
     nnoremap <leader>el :ElmEvalLine<CR>
     vnoremap <leader>es :<C-u>ElmEvalSelection<CR>
-    nnoremap <leader>ep :ElmPrintTypes<CR>
     nnoremap <leader>em :ElmMakeCurrentFile<CR>
 
 ### Example autocommands
