@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language: Elm (http://elm-lang.org/)
 " Maintainer: Alexander Noriega
-" Latest Revision: 01 November 2013
+" Latest Revision: 12 January 2015
 
 if exists("b:current_syntax")
   finish
@@ -62,7 +62,7 @@ syn match elmNumber "\(\<\d\+\>\)"
 syn match elmNumber "\(\<\d\+\.\d\+\>\)"
 
 " Types
-syn match elmType "\<[A-Z][A-Za-z_'-]*"
+syn match elmType "\<[A-Z][0-9A-Za-z_'-]*"
 
 let b:current_syntax = "elm"
 

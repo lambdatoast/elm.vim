@@ -2,6 +2,15 @@
 
 Vim plugin for the [Elm programming language](http://elm-lang.org/).
 
+## Installation
+
+Just like any other plugin, clone this repository into the `~/.vim/bundle` directory
+
+    cd ~/.vim/bundle && \
+    git clone https://github.com/lambdatoast/elm.vim.git
+
+If you are unfamiliar with this process, please refer to the [Pathogen](https://github.com/tpope/vim-pathogen) project.
+
 ## System Requirements
 
 Nothing other than vim is needed for the syntax highlighting.
