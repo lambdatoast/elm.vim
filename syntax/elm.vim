@@ -1,14 +1,14 @@
 " Vim syntax file
 " Language: Elm (http://elm-lang.org/)
 " Maintainer: Alexander Noriega
-" Latest Revision: 12 January 2015
+" Latest Revision: 19 April 2015
 
 if exists("b:current_syntax")
   finish
 endif
 
 " Keywords
-syn keyword elmKeyword alias as case else if import in let module of port then type where
+syn keyword elmKeyword alias as case else exposing if import in let module of port then type where
 
 " Builtin operators
 syn match elmBuiltinOp "\~"
