@@ -1,0 +1,9 @@
+ElmEvalLine	elm-vim.txt	/*ElmEvalLine*
+ElmEvalSelection	elm-vim.txt	/*ElmEvalSelection*
+ElmMake	elm-vim.txt	/*ElmMake*
+ElmMakeCurrentFile	elm-vim.txt	/*ElmMakeCurrentFile*
+ElmMakeMain	elm-vim.txt	/*ElmMakeMain*
+ElmRepl	elm-vim.txt	/*ElmRepl*
+elm-features	elm-vim.txt	/*elm-features*
+elm-requirements	elm-vim.txt	/*elm-requirements*
+elm-vim.txt	elm-vim.txt	/*elm-vim.txt*
